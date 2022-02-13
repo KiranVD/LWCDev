@@ -1,0 +1,7 @@
+{
+  "name": "@wcd/kiranvd.lwc-kzl8vtjg-fork-kzl8ww1z",
+  "version": "0.0.0",
+  "scripts": {
+    "serve": "npx wcd-cli@latest serve CwAoadbYr6JXkYmyTK56 --open"
+  }
+}
