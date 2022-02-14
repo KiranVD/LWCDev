@@ -8,6 +8,8 @@ let initialValues = {
 
 export default class App extends LightningElement {
     @track total = initialValues;
+    defaultView = 'LIST';
+    showListView = true;
     connectedCallback(){
       this.fetchData();
     }
@@ -26,5 +28,14 @@ export default class App extends LightningElement {
         this.total.total_active += data.positive;
       })
       console.log('@@@data'+this.total.total_deaths);
+    }
+
+    clickHandler(event){
+      console.log('@@@'+event.target.dataset.name)
+      if(event.target.dataset.name === 'LIST'){
+        this.showListView = true;
+      }else{
+        this.showListView = false;
+      }
     }
 }
