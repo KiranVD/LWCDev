@@ -11,9 +11,25 @@
 			<div class="slds-text-align_center slds-text-heading_medium white-color">Total Active</div>
 			<div class="slds-text-align_center slds-text-heading_large white-color">{total.total_recovered}</div>
 		</div>
-		<div class="slds-col bg-success slds-p-around_small slds-m-around_small">
+		<div class="slds-col bg-secondary slds-p-around_small slds-m-around_small">
 			<div class="slds-text-align_center slds-text-heading_medium white-color">Total Recovered</div>
 			<div class="slds-text-align_center slds-text-heading_large white-color">{total.total_active}</div>
 		</div>
+
+		<!-- Card for heading and toggle view-->
+		<div class="slds-m-left_medium slds-m-right_medium">
+			<div class="slds-p-around_medium lgc-bg">
+				<div class="box-container">
+					<h1>COVID data by country</h1>
+					<div class="toggle-container">
+						<div data-name="LIST" onclick={clickHandler}>LIST</div>
+						<div data-name="CHART" onclick={clickHandler}>CHART</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<template if:true={showListView}>I am List View</template>
+		<template if:false={showListView}>I am Chart View</template>
 	</div>
+
 </template>
